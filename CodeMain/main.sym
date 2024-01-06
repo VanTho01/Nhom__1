@@ -1,0 +1,212 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-009 AdminPass
+00A     CurrentKey
+00B     CurrentCodeIndex
+00C-011 CurrentPass
+012     CurrentState
+013     WrongCount
+014-019 UID
+01A-01F Card1
+020     MAIN.CheckPassResult
+021     MAIN.TagType
+022     MAIN.CardFound
+023     CheckPass.PassResult
+023-024 MFRC522_ReadCardSerial.str
+023     MFRC522_AntennaOn.stt
+023     CheckCard.Result
+023     lcd_init.i
+023     MFRC522_Halt.unLen
+023-024 MFRC522_isCard.TagType
+023     Beep.BeepCount
+023     @PSTRINGC_670.@SCRATCH1
+023     MAIN.@SCRATCH1
+024-027 MFRC522_Halt.buff
+024     CheckCard.i
+024-027 lcd_init.LCD_INIT_STRING
+024     Beep.i
+024     CheckPass.i
+024     @PSTRINGC_670.@SCRATCH2
+024     MAIN.@SCRATCH2
+025     lcd_putc.c
+025     MFRC522_ReadCardSerial._status
+025     MFRC522_Request.reqMode
+025     MFRC522_isCard.@SCRATCH1
+025     CheckPass.@SCRATCH1
+025     CheckCard.@SCRATCH1
+026-027 MFRC522_AntiColl.serNum
+026-027 MFRC522_Request.TagType
+026     lcd_gotoxy.x
+026     MFRC522_ReadCardSerial.@SCRATCH1
+027     lcd_gotoxy.y
+027     MFRC522_ReadCardSerial.@SCRATCH2
+028     @delay_ms1.P1
+028     MFRC522_Request._status
+028     MFRC522_AntiColl._status
+028-029 MFRC522_CRC.dataIn
+028     lcd_gotoxy.address
+028     lcd_init.@SCRATCH1
+029     MFRC522_Request.backBits
+029     MFRC522_AntiColl.i
+029     lcd_gotoxy.@SCRATCH1
+02A     lcd_send_byte.address
+02A     MFRC522_AntiColl.serNumCheck
+02A     MFRC522_CRC.length
+02A     MFRC522_Request.@SCRATCH1
+02B     MFRC522_AntiColl.unLen
+02B-02C MFRC522_CRC.dataOut
+02B     lcd_send_byte.n
+02B     MFRC522_Request.@SCRATCH2
+02C     MFRC522_ToCard.command
+02C     lcd_read_byte.low
+02C     lcd_send_byte.@SCRATCH1
+02C     MFRC522_AntiColl.@SCRATCH1
+02D     lcd_read_byte.high
+02D     lcd_send_nibble.n
+02D     MFRC522_CRC.i
+02D-02E MFRC522_ToCard.sendData
+02D     MFRC522_AntiColl.@SCRATCH2
+02E     MFRC522_CRC.n
+02E     lcd_read_nibble.n
+02E     lcd_read_byte.@SCRATCH1
+02F     MFRC522_ToCard.sendLen
+02F     lcd_read_nibble.@SCRATCH1
+02F     MFRC522_CRC.@SCRATCH1
+030-031 MFRC522_ToCard.backData
+030     MFRC522_CRC.@SCRATCH2
+032-033 MFRC522_ToCard.backLen
+034     MFRC522_ToCard._status
+035     MFRC522_ToCard.irqEn
+036     MFRC522_ToCard.waitIRq
+037     MFRC522_ToCard.lastBits
+038     MFRC522_ToCard.n
+039     MFRC522_ToCard.i
+03A     MFRC522_Clear_Bit.addr
+03A     MFRC522_Set_Bit.addr
+03A     MFRC522_ToCard.@SCRATCH1
+03B     MFRC522_Clear_Bit.mask
+03B     MFRC522_Set_Bit.mask
+03B     MFRC522_ToCard.@SCRATCH2
+03C     MFRC522_Clear_Bit.tmp
+03C     MFRC522_Set_Bit.tmp
+03C     MFRC522_ToCard.@SCRATCH3
+03D     MFRC522_Rd.address
+03D     MFRC522_Clear_Bit.@SCRATCH1
+03D     MFRC522_Set_Bit.@SCRATCH1
+03E     MFRC522_Rd.i
+03E     MFRC522_Wr.address
+03F     MFRC522_Rd.ucAddr
+03F     MFRC522_Wr.value
+040     MFRC522_Wr.i
+040     MFRC522_Rd.ucResult
+041     MFRC522_Wr.ucAddr
+041     MFRC522_Rd.@SCRATCH1
+042     MFRC522_Wr.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1_LOW
+FBE     CCP_1
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const801.call
+000006  @const803.call
+000018  @const805.call
+00001A  @const806.call
+000028  @const820.call
+00003A  @const821.call
+00004C  @const822.call
+00005E  @const824.call
+000070  @const825.call
+000082  @const826.call
+000094  OffBuzzer
+00009A  OffLedGreen
+0000A0  OffLedRed
+0000A6  @delay_ms1
+0000D4  lcd_send_nibble
+000116  lcd_read_nibble
+000168  lcd_read_byte
+0001B4  lcd_send_byte
+0001FA  lcd_init
+00027A  lcd_gotoxy
+00029C  lcd_putc
+0002EC  @PSTRINGC_670
+00030C  DisplayMain
+000322  MFRC522_Wr
+00038C  MFRC522_Reset
+0003B6  MFRC522_Rd
+000422  MFRC522_Clear_Bit
+000440  MFRC522_AntennaOff
+00044E  MFRC522_Set_Bit
+00046A  MFRC522_AntennaOn
+000482  MFRC522_Init
+0004CE  ScanKeyboard
+00060E  DisplayInputPass
+00062E  CheckPass
+000678  OnLedRed
+00067E  OnBuzzer
+000684  Beep
+0006A2  ResetInput
+0006B2  OnLedGreen
+0006B8  MFRC522_ToCard
+000838  MFRC522_Request
+000888  MFRC522_isCard
+0008AA  MFRC522_AntiColl
+00093C  MFRC522_ReadCardSerial
+00096C  CheckCard
+0009B4  MFRC522_CRC
+000A5E  MFRC522_Halt
+000AA8  @cinit1
+000AA8  MAIN
+000ABC  @cinit2
+000CE0  @goto11325
+
+Project Directory:
+    D:\Bussiness\Backend\Project\PIC18F4520 RC522 the thu mat khau\Code\
+
+Project Files:
+    main.c                                                  [24-Dec-23 10:44  CRC=B55749AD]
+    main.h                                                  [24-Dec-23 09:59  CRC=1C5A6858]
+    C:\Program Files (x86)\PICC\Devices\18F4520.h           [12-Nov-13 14:35  CRC=30BAB57A]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [19-Sep-13 15:38  CRC=D1A6378A]
+    Built_in.h                                              [20-Nov-16 09:07  CRC=E92E22EA]
+
+Source signature=A66EE4DD
+
+Units:
+    main (main)
+
+Compiler Settings:
+    Processor:      PIC18F4520
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   main.xsym
+    Errors:      main.err
+    Ext Symbols: main.esym
+    INHX32:      main.hex
+    Symbols:     main.sym
+    List:        main.lst
+    Debug/COFF:  main.cof
+    Project:     main.ccspjt
+    Call Tree:   main.tre
+    Statistics:  main.STA

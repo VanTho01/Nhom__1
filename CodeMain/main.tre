@@ -1,0 +1,184 @@
+ÀÄmain
+   ÀÄMAIN  0/568  Ram=5
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄOffBuzzer  0/6  Ram=0
+      ÃÄOffLedGreen  0/6  Ram=0
+      ÃÄOffLedRed  0/6  Ram=0
+      ÃÄlcd_init  0/128  Ram=6
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄlcd_send_nibble  0/66  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄlcd_send_nibble  0/66  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÀÄlcd_send_byte  0/70  Ram=3
+      ³     ÃÄlcd_read_byte  0/76  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/82  Ram=2
+      ³     ³  ÀÄlcd_read_nibble  0/82  Ram=2
+      ³     ÃÄlcd_send_nibble  0/66  Ram=1
+      ³     ÀÄlcd_send_nibble  0/66  Ram=1
+      ÃÄDisplayMain  0/22  Ram=0
+      ³  ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ³  ÀÄlcd_putc  0/80  Ram=1
+      ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ³     ³  ÀÄlcd_send_byte  0/70  Ram=3
+      ³  ³     ³     ÀÄ*
+      ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ³     ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÃÄlcd_send_byte  0/70  Ram=3
+      ³  ³     ³  ÀÄ*
+      ³  ³     ÀÄlcd_send_byte  0/70  Ram=3
+      ³  ³        ÀÄ*
+      ³  ÀÄ@PSTRINGC_670  0/32  Ram=2
+      ³     ÀÄ*
+      ÃÄMFRC522_Init  0/76  Ram=0
+      ³  ÃÄMFRC522_Reset  0/42  Ram=0
+      ³  ³  ÀÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_Wr  0/106  Ram=5
+      ³  ÃÄMFRC522_AntennaOff  0/14  Ram=0
+      ³  ³  ÀÄMFRC522_Clear_Bit  0/30  Ram=4
+      ³  ³     ÃÄMFRC522_Rd  0/108  Ram=5
+      ³  ³     ÀÄMFRC522_Wr  0/106  Ram=5
+      ³  ÀÄMFRC522_AntennaOn  0/24  Ram=1
+      ³     ÃÄMFRC522_Rd  0/108  Ram=5
+      ³     ÀÄMFRC522_Set_Bit  0/28  Ram=4
+      ³        ÃÄMFRC522_Rd  0/108  Ram=5
+      ³        ÀÄMFRC522_Wr  0/106  Ram=5
+      ÃÄScanKeyboard  0/320  Ram=0
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÀÄ@delay_ms1  0/46  Ram=1
+      ÃÄ@goto11325  0/50  Ram=0
+      ÃÄDisplayInputPass  0/32  Ram=0
+      ³  ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_gotoxy  0/34  Ram=4
+      ³     ÀÄ*
+      ÃÄlcd_putc  0/80  Ram=1
+      ³  ÀÄ*
+      ÃÄCheckPass  0/74  Ram=3
+      ÃÄOnLedRed  0/6  Ram=0
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄBeep  0/30  Ram=2
+      ³  ÃÄOnBuzzer  0/6  Ram=0
+      ³  ÃÄ@delay_ms1  0/46  Ram=1
+      ³  ÃÄOffBuzzer  0/6  Ram=0
+      ³  ÀÄ@delay_ms1  0/46  Ram=1
+      ÃÄ@delay_ms1  0/46  Ram=1
+      ÃÄResetInput  0/16  Ram=0
+      ÃÄDisplayInputPass  0/32  Ram=0
+      ³  ÀÄ*
+      ÃÄOffLedRed  0/6  Ram=0
+      ÃÄOnBuzzer  0/6  Ram=0
+      ÃÄOnLedRed  0/6  Ram=0
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄOnLedGreen  0/6  Ram=0
+      ÃÄBeep  0/30  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/46  Ram=1
+      ÃÄResetInput  0/16  Ram=0
+      ÃÄDisplayMain  0/22  Ram=0
+      ³  ÀÄ*
+      ÃÄOffLedGreen  0/6  Ram=0
+      ÃÄMFRC522_isCard  0/34  Ram=3
+      ³  ÀÄMFRC522_Request  0/80  Ram=7
+      ³     ÃÄMFRC522_Wr  0/106  Ram=5
+      ³     ÀÄMFRC522_ToCard  0/384  Ram=17
+      ³        ÃÄMFRC522_Wr  0/106  Ram=5
+      ³        ÃÄMFRC522_Clear_Bit  0/30  Ram=4
+      ³        ³  ÀÄ*
+      ³        ÃÄMFRC522_Set_Bit  0/28  Ram=4
+      ³        ³  ÀÄ*
+      ³        ÃÄMFRC522_Wr  0/106  Ram=5
+      ³        ÃÄMFRC522_Wr  0/106  Ram=5
+      ³        ÃÄMFRC522_Wr  0/106  Ram=5
+      ³        ÃÄMFRC522_Set_Bit  0/28  Ram=4
+      ³        ³  ÀÄ*
+      ³        ÃÄMFRC522_Rd  0/108  Ram=5
+      ³        ÃÄMFRC522_Clear_Bit  0/30  Ram=4
+      ³        ³  ÀÄ*
+      ³        ÃÄMFRC522_Rd  0/108  Ram=5
+      ³        ÃÄMFRC522_Rd  0/108  Ram=5
+      ³        ÃÄMFRC522_Rd  0/108  Ram=5
+      ³        ÀÄMFRC522_Rd  0/108  Ram=5
+      ÃÄMFRC522_ReadCardSerial  0/48  Ram=5
+      ³  ÀÄMFRC522_AntiColl  0/146  Ram=8
+      ³     ÃÄMFRC522_Wr  0/106  Ram=5
+      ³     ÃÄMFRC522_Clear_Bit  0/30  Ram=4
+      ³     ³  ÀÄ*
+      ³     ÀÄMFRC522_ToCard  0/384  Ram=17
+      ³        ÀÄ*
+      ÃÄCheckCard  0/72  Ram=3
+      ÃÄOnLedRed  0/6  Ram=0
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄBeep  0/30  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/46  Ram=1
+      ÃÄDisplayMain  0/22  Ram=0
+      ³  ÀÄ*
+      ÃÄOffLedRed  0/6  Ram=0
+      ÃÄOnBuzzer  0/6  Ram=0
+      ÃÄOnLedRed  0/6  Ram=0
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄlcd_gotoxy  0/34  Ram=4
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_670  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄOnLedGreen  0/6  Ram=0
+      ÃÄBeep  0/30  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/46  Ram=1
+      ÃÄDisplayMain  0/22  Ram=0
+      ³  ÀÄ*
+      ÃÄOffLedGreen  0/6  Ram=0
+      ÀÄMFRC522_Halt  0/74  Ram=5
+         ÃÄMFRC522_CRC  0/170  Ram=9
+         ³  ÃÄMFRC522_Clear_Bit  0/30  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄMFRC522_Set_Bit  0/28  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄMFRC522_Wr  0/106  Ram=5
+         ³  ÃÄMFRC522_Wr  0/106  Ram=5
+         ³  ÃÄMFRC522_Rd  0/108  Ram=5
+         ³  ÃÄMFRC522_Rd  0/108  Ram=5
+         ³  ÀÄMFRC522_Rd  0/108  Ram=5
+         ÃÄMFRC522_Clear_Bit  0/30  Ram=4
+         ³  ÀÄ*
+         ÃÄMFRC522_ToCard  0/384  Ram=17
+         ³  ÀÄ*
+         ÀÄMFRC522_Clear_Bit  0/30  Ram=4
+            ÀÄ*

@@ -1,0 +1,186 @@
+#define LCD_ENABLE_PIN     PIN_D3           
+#define LCD_RS_PIN         PIN_D1                                                   
+#define LCD_RW_PIN         PIN_D2                         
+#define LCD_DATA4          PIN_D4                                                          
+#define LCD_DATA5          PIN_D5                                    
+#define LCD_DATA6          PIN_D6                                                      
+#define LCD_DATA7          PIN_D7   
+
+
+// dinh nghia ten cac phim bam
+#define KEY0 0
+#define KEY1 1
+#define KEY2 2
+#define KEY3 3
+#define KEY4 4
+#define KEY5 5
+#define KEY6 6
+#define KEY7 7
+#define KEY8 8
+#define KEY9 9
+#define KEYSTAR 10
+#define KEYHASH 11
+#define NOKEY 12
+
+#define KC1 PIN_B2
+#define KC2 PIN_B1
+#define KC3 PIN_B0
+#define KR1 PIN_B4
+#define KR2 PIN_B5
+#define KR3 PIN_B6
+#define KR4 PIN_B3
+
+
+#include <main.h>
+#include <lcd.c> 
+int8 AdminPass[6]={1,2,3,4,5,6};
+
+
+
+int8 ScanKeyboard(void)
+{
+ output_low(KC1);
+ if(!input(KR1)) 
+ { 
+  while(!input(KR1));
+  delay_ms(10);
+  return KEY1;
+ }
+ 
+ if(!input(KR2)) 
+  { 
+   while(!input(KR2));
+   delay_ms(10);
+   return KEY4;
+  }
+  
+ if(!input(KR3))
+ {
+  while(!input(KR3));
+  delay_ms(10);
+  return KEY7;
+ }
+ 
+ if(!input(KR4)) 
+  {
+  while(!input(KR4));
+  delay_ms(10);
+  return KEYSTAR;
+ }
+ 
+ output_high(KC1);
+ output_low(KC2);
+ 
+ if(!input(KR1)) 
+ { 
+  while(!input(KR1));
+  delay_ms(10);
+  return KEY2;
+ }
+ 
+ if(!input(KR2)) 
+  { 
+   while(!input(KR2));
+   delay_ms(10);
+   return KEY5;
+  }
+  
+ if(!input(KR3))
+ {
+  while(!input(KR3));
+  delay_ms(10);
+  return KEY8;
+ }
+ 
+ if(!input(KR4)) 
+  {
+  while(!input(KR4));
+  delay_ms(10);
+  return KEY0;
+ }
+ 
+ output_high(KC2);
+ output_low(KC3);
+ 
+ if(!input(KR1)) 
+ { 
+  while(!input(KR1));
+  delay_ms(10);
+  return KEY3;
+ }
+ 
+ if(!input(KR2)) 
+  { 
+   while(!input(KR2));
+   delay_ms(10);
+   return KEY6;
+  }
+  
+ if(!input(KR3))
+ {
+  while(!input(KR3));
+  delay_ms(10);
+  return KEY9;
+ }
+ 
+ if(!input(KR4)) 
+  {
+  while(!input(KR4));
+  delay_ms(10);
+  return KEYHASH;
+ }
+ 
+ output_high(KC3);
+ return NOKEY;
+
+}
+
+void OnBuzzer()
+{
+    output_high(PIN_C2);// Mo Loa
+}
+
+void OffBuzzer()
+{
+    output_Low(PIN_C2);// tat Loa
+}
+
+void OnLedGreen()
+{
+ output_high(PIN_C1);
+}
+
+void OffLedGreen()
+{
+ output_Low(PIN_C1);
+}
+
+void OnLedRed()
+{
+ output_high(PIN_C0);
+}
+
+void OffLedRed()
+{
+ output_Low(PIN_C0);
+}
+
+
+void DisplayMain()
+{
+   lcd_putc("\f");
+   lcd_putc("KHOA MAT MA-RFID");  
+}
+
+
+void main()
+{
+   SET_TRIS_D(0x00);
+   lcd_init(); // khoi tao LCD
+   DisplayMain();
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}
